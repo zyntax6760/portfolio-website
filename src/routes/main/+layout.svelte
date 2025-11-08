@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import '$lib/app.css';
-	import favicon from '$lib/assets/favicon.svg';
 	import { isMobile, mobileMenuOpen } from '$lib/components/mobile_nav.js';
 
 	let activeSection = 'home';
@@ -52,7 +51,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href="/imgs/favicon.svg" />
 	<link
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
 		rel="stylesheet"
@@ -72,7 +71,7 @@
 				<!-- 상단 로고 & 햄버거 버튼 -->
 				<div class="flex w-full items-center justify-between">
 					<a href="/main#home">
-						<img src={favicon} alt="main logo" width="40" height="40" />
+						<img src="/imgs/profile.svg" alt="main logo" width="40" height="40" />
 					</a>
 					<button
 						on:click={toggleMobileMenu}
@@ -128,7 +127,7 @@
 		>
 			<div class="mx-auto flex items-center justify-between p-4">
 				<a href="/main#home">
-					<img src={favicon} alt="main logo" width="40" height="40" />
+					<img src="/imgs/profile.svg" alt="main logo" width="40" height="40" />
 				</a>
 				<ul class="gap-15 flex text-xl font-medium text-white">
 					{#each sections as id}

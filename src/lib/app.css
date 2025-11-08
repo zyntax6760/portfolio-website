@@ -7,3 +7,8 @@ html {
 #nav_shadow {
    box-shadow: 3px 3px 6px rgba(0,0,0,0.08) inset, -3px -3px 6px rgba(0,0,0,0.08) inset;
 }
+
+li {
+   text-indent: -20px;
+   margin-left: 8px;
+}
