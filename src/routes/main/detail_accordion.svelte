@@ -16,21 +16,21 @@
 		class="flex w-full items-center justify-between py-2 focus:outline-none"
 		on:click={toggle}
 	>
-		<h3 class="text-lg font-medium">{title}</h3>
+		<h3 class="text-lg font-medium dark:text-white">{title}</h3>
 		<!-- 삼각형 클릭하면 아래로 90도 -->
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 14 14"
-			class="duration-250 h-5 w-5 transition-transform"
+			class="duration-250 h-5 w-5 text-black transition-transform dark:text-white"
 			style="transform: rotate({open ? -90 : 0}deg)"
 		>
 			<!-- 왼쪽을 가리키는 삼각형 -->
-			<path d="M 10 1 Z L 0 7 L 10 12 Z" fill="#000" />
+			<path d="M 10 1 Z L 0 7 L 10 12 Z" fill="currentColor" />
 		</svg>
 	</button>
 	<!-- 내용 (슬라이드) -->
 	{#if open}
-		<div transition:slide={{ duration: 250 }} class="mt-2 text-black">
+		<div transition:slide={{ duration: 250 }} class="mt-2 dark:text-white">
 			<slot />
 		</div>
 	{/if}

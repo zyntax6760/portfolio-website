@@ -62,12 +62,11 @@
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
 	/>
 </svelte:head>
-<main class="min-h-screen scroll-smooth">
+<main
+	class="bg-linear-to-b min-h-screen scroll-smooth from-gray-700 to-gray-400 dark:from-gray-900 dark:to-gray-500"
+>
 	<!-- 히어로 섹션 -->
-	<div
-		id="home"
-		class="flex min-h-screen items-center justify-center bg-linear-to-b from-gray-800 to-gray-600 pt-20 dark:from-gray-900 dark:to-gray-800"
-	>
+	<div id="home" class="bg-linear-to-b py-50 flex min-h-screen items-center justify-center">
 		<div class="mx-auto max-w-4xl px-6 text-center">
 			<div class="mb-8">
 				<div
@@ -86,21 +85,21 @@
 					>Misty6760</span
 				>
 			</div>
-			<div class="min-h-50 flex max-h-screen items-center justify-center">
+			<div class="min-h-50 relative flex max-h-screen items-center justify-center">
 				{#if !isMobileDevice}
-					<a href="#about" class="bottom-30 absolute left-1/2 -translate-x-1/2">
+					<a href="#about" class="absolute bottom-10 left-1/2 -translate-x-1/2">
 						<img
 							src="/imgs/mouse-cursor.svg"
 							alt="Scroll down"
-							class="h-16 w-16 transform transition duration-300 ease-out hover:translate-y-5"
+							class="h-16 w-16 transform transition duration-300 ease-out hover:translate-y-5 dark:invert"
 						/>
 					</a>
 				{:else}
-					<a href="#about" class="bottom-30 absolute left-1/2 -translate-x-1/2">
+					<a href="#about" class="absolute bottom-10 left-1/2 -translate-x-1/2">
 						<img
 							src="/imgs/mouse-cursor.svg"
 							alt="Scroll down"
-							class="h-16 w-16 transform transition duration-300 ease-out active:translate-y-5"
+							class="h-16 w-16 transform transition duration-300 ease-out active:translate-y-5 dark:invert"
 						/>
 					</a>
 				{/if}
@@ -108,10 +107,7 @@
 		</div>
 	</div>
 	<!-- 정보 섹션 -->
-	<div
-		id="about"
-		class="bg-linear-to-b from-gray-600 to-gray-500 py-20 dark:from-gray-800 dark:to-gray-700"
-	>
+	<div id="about" class="py-20">
 		<div class="mx-auto my-28 max-w-3xl px-4">
 			<h2 class="mb-8 text-center text-3xl font-bold dark:text-white">About Me</h2>
 			<div
@@ -153,10 +149,7 @@
 		</div>
 	</div>
 	<!-- 스킬 섹션 -->
-	<div
-		id="skills"
-		class="bg-linear-to-b from-gray-500 to-gray-400 py-40 dark:from-gray-700 dark:to-gray-600"
-	>
+	<div id="skills" class="py-30">
 		<div class="mx-auto my-28 max-w-3xl px-4">
 			<h2 class="mb-8 text-center text-3xl font-bold dark:text-white">Skills</h2>
 			<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -195,7 +188,7 @@
 	</div>
 	<!-- 프로젝트 섹션 -->
 	<Toast />
-	<div id="projects" class="bg-gray-400 py-60 dark:bg-gray-600">
+	<div id="projects" class="py-50">
 		<div class="mx-auto max-w-6xl px-4">
 			<h2 class="mb-8 text-center text-3xl font-bold dark:text-white">Projects</h2>
 			<div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
@@ -290,7 +283,7 @@
 		</div>
 	</div>
 	<!-- 연락처 섹션 -->
-	<div id="contact" class="bg-gray-400 py-40 dark:bg-gray-600">
+	<div id="contact" class="py-60">
 		<div class="mx-auto max-w-4xl px-4">
 			<h2 class="mb-8 text-center text-3xl font-bold dark:text-white">Contact</h2>
 			<div class="flex flex-col items-center justify-center space-y-4 md:grid-cols-2">
