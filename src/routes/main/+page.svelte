@@ -62,11 +62,12 @@
 	<meta property="og:url" content="https://misty6760.kro.kr" />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Misty6760" />
-	<meta property="og:image" content="https://misty6760.kro.kr/imgs/preview.png" />
+	<meta property="og:image" content="https://misty6760.kro.kr/src/preview.png" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="600" />
 	<meta property="og:image:height" content="315" />
 	<meta property="og:image:alt" content="Misty6760 Preview" />
+	<link rel="preload" as="image" imagesrcset="src/preview.png">
 	<link
 		rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
