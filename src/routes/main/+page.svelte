@@ -61,8 +61,11 @@
 	<meta property="og:description" content="안녕하세요! Misty6760의 자기소개 사이트입니다!" />
 	<meta property="og:url" content="https://misty6760.kro.kr" />
 	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Misty6760" />
 	<meta property="og:image" content="https://misty6760.kro.kr/imgs/preview.png" />
 	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="600" />
+	<meta property="og:image:height" content="315" />
 	<meta property="og:image:alt" content="Misty6760 Preview" />
 	<link
 		rel="stylesheet"
