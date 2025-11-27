@@ -57,6 +57,9 @@
 </script>
 
 <svelte:head>
+	<meta property="og:title" content="Misty6760">
+	<meta property="og:description" content="안녕하세요! 이곳은 Misty6760의 자기소개 사이트입니다!">
+	<meta property="og:url" content="https://misty6760.kro.kr">
 	<link
 		rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
@@ -122,13 +125,16 @@
 						>입니다.
 					</p>
 					<p class="dark:text-gray-100">
-						<span class="font-bold duration-200 hover:text-teal-400 dark:hover:text-teal-300"
+						<span
+							class="cursor-pointer font-bold duration-200 hover:text-teal-400 dark:hover:text-teal-300"
 							>프론트엔드</span
 						>,
-						<span class="font-bold duration-200 hover:text-teal-400 dark:hover:text-teal-300"
+						<span
+							class="cursor-pointer font-bold duration-200 hover:text-teal-400 dark:hover:text-teal-300"
 							>임베디드 시스템</span
 						>,
-						<span class="font-bold duration-200 hover:text-teal-400 dark:hover:text-teal-300"
+						<span
+							class="cursor-pointer font-bold duration-200 hover:text-teal-400 dark:hover:text-teal-300"
 							>데이터베이스</span
 						>를 공부하는 중입니다!
 					</p>
@@ -283,43 +289,52 @@
 		</div>
 	</div>
 	<!-- 연락처 섹션 -->
-	<div id="contact" class="py-60">
+	<div id="contact" class="pt-30 pb-20">
 		<div class="mx-auto max-w-4xl px-4">
 			<h2 class="mb-8 text-center text-3xl font-bold dark:text-white">Contact</h2>
-			<div class="flex flex-col items-center justify-center space-y-4 md:grid-cols-2">
-				<div class="flex items-center justify-center gap-2">
+			<div class="grid grid-cols-2 items-center gap-x-6 gap-y-4">
+				<div class="justify-self-end">
 					<Mail />
+				</div>
+				<div class="justify-self-start">
 					<a
 						href={emailLink}
 						target="_blank"
+						rel="noopener noreferrer"
 						class="text-xl font-bold text-gray-900 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+						>Email</a
 					>
-						Email
-					</a>
 				</div>
-				<div>
-					<div class="flex items-center justify-center gap-2">
-						<Github />
-						<a
-							href="https://github.com/misty6760"
-							target="_blank"
-							class="text-xl font-bold text-gray-900 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
-							>GitHub</a
-						>
-					</div>
+				<div class="justify-self-end">
+					<Github />
 				</div>
-				<div>
-					<div class="flex items-center justify-center gap-2">
-						<img src="/imgs/discord.svg" alt="discord" class="h-7 w-7" />
-						<a
-							href="https://discord.com/users/901664081801535489"
-							target="_blank"
-							class="text-xl font-bold text-gray-700 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
-							>Discord</a
-						>
-					</div>
+				<div class="justify-self-start">
+					<a
+						href="https://github.com/misty6760"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-xl font-bold text-gray-900 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+						>GitHub</a
+					>
+				</div>
+				<div class="justify-self-end">
+					<img src="imgs/discord.svg" alt="Discord" class="w-6.5 h-6.5" />
+				</div>
+				<div class="justify-self-start">
+					<a
+						href="https://discord.com/users/901664081801535489"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-xl font-bold text-gray-700 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+					>Discord</a>
 				</div>
 			</div>
+		</div>
+	</div>
+	<!-- 푸터 섹션 -->
+	<div class="bg-gray-700 py-30">
+		<div class="grid grid-cols-">
+
 		</div>
 	</div>
 </main>
