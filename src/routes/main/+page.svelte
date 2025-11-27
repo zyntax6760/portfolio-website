@@ -57,10 +57,13 @@
 </script>
 
 <svelte:head>
-	<meta property="og:title" content="Misty6760">
-	<meta property="og:description" content="안녕하세요! Misty6760의 자기소개 사이트입니다!">
-	<meta property="og:url" content="https://misty6760.kro.kr">
-	<meta property="og:image" content="https://misty6760.kro.kr/imgs/preview.png">
+	<meta property="og:title" content="Misty6760" />
+	<meta property="og:description" content="안녕하세요! Misty6760의 자기소개 사이트입니다!" />
+	<meta property="og:url" content="https://misty6760.kro.kr" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://misty6760.kro.kr/imgs/preview.png" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:alt" content="Misty6760 Preview" />
 	<link
 		rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
@@ -327,15 +330,14 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="text-xl font-bold text-gray-700 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
-					>Discord</a>
+						>Discord</a
+					>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- 푸터 섹션 -->
-	<div class="bg-gray-700 py-30">
-		<div class="grid grid-cols-">
-
-		</div>
+	<div class="py-30 bg-gray-700">
+		<div class="grid-cols- grid"></div>
 	</div>
 </main>
