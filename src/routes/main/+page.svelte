@@ -58,7 +58,7 @@
 
 <svelte:head>
 	<meta property="og:title" content="Misty6760">
-	<meta property="og:description" content="안녕하세요! 이곳은 Misty6760의 자기소개 사이트입니다!">
+	<meta property="og:description" content="안녕하세요! Misty6760의 자기소개 사이트입니다!">
 	<meta property="og:url" content="https://misty6760.kro.kr">
 	<meta property="og:image" content="https://misty6760.kro.kr/imgs/preview.png">
 	<link
