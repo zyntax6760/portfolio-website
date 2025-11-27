@@ -60,7 +60,7 @@
 	<meta property="og:title" content="Misty6760">
 	<meta property="og:description" content="안녕하세요! 이곳은 Misty6760의 자기소개 사이트입니다!">
 	<meta property="og:url" content="https://misty6760.kro.kr">
-	<meta property="og:image" content="https://misty6760.kro.kr/imgs/preview.png">
+	<meta property="og:image" content="https://misty6760.kro.kr/preview/imgs/preview.png">
 	<link
 		rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
