@@ -1,3 +1,11 @@
-# allow crawling everything by default
+# Robots.txt for Misty6760
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /api/
+Disallow: /_app/
+
+# Sitemap location
+Sitemap: https://misty6760.kro.kr/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

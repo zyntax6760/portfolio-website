@@ -66,7 +66,6 @@
 	<meta name="keywords" content="Misty6760, 개발자, 포트폴리오, 자기소개, 웹개발, 프로그래밍" />
 	<meta name="author" content="Misty6760" />
 	<meta name="robots" content="index, follow" />
-	<meta name="language" content="Korean" />
 	<meta name="theme-color" content="#4B5563" />
 
 	<!-- Open Graph 메타 태그 -->
@@ -78,7 +77,6 @@
 	<meta property="og:url" content="https://misty6760.kro.kr" />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Misty6760" />
-	<meta property="og:locale" content="ko_KR" />
 	<meta property="og:image" content="https://misty6760.kro.kr/preview.png" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="600" />
@@ -93,13 +91,22 @@
 		content="안녕하세요! Misty6760의 자기소개 사이트입니다! 개발자 포트폴리오와 프로젝트를 확인해보세요."
 	/>
 	<meta name="twitter:image" content="https://misty6760.kro.kr/preview.png" />
-	<meta name="twitter:image:alt" content="Misty6760 Preview" />
 
 	<!-- 기타 SEO 태그 -->
 	<link rel="canonical" href="https://misty6760.kro.kr" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<meta name="apple-mobile-web-app-title" content="Misty6760" />
+
+	<!-- 구조화된 데이터 (JSON-LD) -->
+	{@html `<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Misty6760",
+		"url": "https://misty6760.kro.kr",
+		"image": "https://misty6760.kro.kr/preview.png",
+		"sameAs": ["https://github.com/misty6760"],
+		"jobTitle": "Developer"
+	}
+	</script>`}
 
 	<link rel="preload" as="image" href="/preview.png" type="image/png" />
 	<link
