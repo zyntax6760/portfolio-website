@@ -71,7 +71,7 @@
 				<!-- 상단 로고 & 햄버거 버튼 -->
 				<div class="flex w-full items-center justify-between">
 					<a href="/main#home">
-						<img src="/imgs/profile.svg" alt="main logo" width="40" height="40" />
+						<img src="/imgs/favicon.svg" alt="main logo" width="40" height="40" />
 					</a>
 					<button
 						on:click={toggleMobileMenu}
@@ -127,7 +127,7 @@
 		>
 			<div class="mx-auto flex items-center justify-between p-4">
 				<a href="/main#home">
-					<img src="/imgs/profile.svg" alt="main logo" width="40" height="40" />
+					<img src="/imgs/favicon.svg" alt="main logo" width="64" height="64" />
 				</a>
 				<ul class="gap-15 flex text-xl font-medium text-white">
 					{#each sections as id}

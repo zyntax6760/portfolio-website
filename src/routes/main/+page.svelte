@@ -58,52 +58,52 @@
 
 <svelte:head>
 	<!-- 기본 SEO 메타 태그 -->
-	<title>Misty6760 - Introduction</title>
+	<title>ZYNTAX - Introduction</title>
 	<meta
 		name="description"
-		content="안녕하세요! Misty6760의 자기소개 사이트입니다! 개발자 포트폴리오와 프로젝트를 확인해보세요."
+		content="안녕하세요! ZYNTAX의 자기소개 사이트입니다! 개발자 포트폴리오와 프로젝트를 확인해보세요."
 	/>
-	<meta name="keywords" content="Misty6760, 개발자, 포트폴리오, 자기소개, 웹개발, 프로그래밍" />
-	<meta name="author" content="Misty6760" />
+	<meta name="keywords" content="ZYNTAX, 개발자, 포트폴리오, 자기소개, 웹개발, 프로그래밍" />
+	<meta name="author" content="ZYNTAX" />
 	<meta name="robots" content="index, follow" />
 	<meta name="theme-color" content="#4B5563" />
 
 	<!-- Open Graph 메타 태그 -->
-	<meta property="og:title" content="Misty6760 - 자기소개 사이트" />
+	<meta property="og:title" content="ZYNTAX - 자기소개 사이트" />
 	<meta
 		property="og:description"
-		content="안녕하세요! Misty6760의 자기소개 사이트입니다! 개발자 포트폴리오와 프로젝트를 확인해보세요."
+		content="안녕하세요! ZYNTAX의 자기소개 사이트입니다! 개발자 포트폴리오와 프로젝트를 확인해보세요."
 	/>
-	<meta property="og:url" content="https://misty6760.kro.kr" />
+	<meta property="og:url" content="https://zyntax.kro.kr" />
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="Misty6760" />
-	<meta property="og:image" content="https://misty6760.kro.kr/preview.png" />
+	<meta property="og:site_name" content="zyntax" />
+	<meta property="og:image" content="https://zyntax.kro.kr/preview.png" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="600" />
 	<meta property="og:image:height" content="315" />
-	<meta property="og:image:alt" content="Misty6760 Preview" />
+	<meta property="og:image:alt" content="zyntax Preview" />
 
 	<!-- Twitter Card 메타 태그 -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Misty6760 - 자기소개 사이트" />
+	<meta name="twitter:title" content="zyntax - 자기소개 사이트" />
 	<meta
 		name="twitter:description"
-		content="안녕하세요! Misty6760의 자기소개 사이트입니다! 개발자 포트폴리오와 프로젝트를 확인해보세요."
+		content="안녕하세요! zyntax의 자기소개 사이트입니다! 개발자 포트폴리오와 프로젝트를 확인해보세요."
 	/>
-	<meta name="twitter:image" content="https://misty6760.kro.kr/preview.png" />
+	<meta name="twitter:image" content="https://zyntax.kro.kr/preview.png" />
 
 	<!-- 기타 SEO 태그 -->
-	<link rel="canonical" href="https://misty6760.kro.kr" />
+	<link rel="canonical" href="https://zyntax.kro.kr" />
 
 	<!-- 구조화된 데이터 (JSON-LD) -->
 	{@html `<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
 		"@type": "Person",
-		"name": "Misty6760",
-		"url": "https://misty6760.kro.kr",
-		"image": "https://misty6760.kro.kr/preview.png",
-		"sameAs": ["https://github.com/misty6760"],
+		"name": "zyntax",
+		"url": "https://zyntax.kro.kr",
+		"image": "https://zyntax.kro.kr/preview.png",
+		"sameAs": ["https://github.com/zyntax6760"],
 		"jobTitle": "Developer"
 	}
 	</script>`}
@@ -127,14 +127,14 @@
 					<img
 						src="/imgs/profile.svg"
 						alt="profil_logo"
-						class="h-45 w-45 mt-10 object-contain p-2"
+						class="h-64 w-64 mt-10 object-contain pb-10"
 					/>
 				</div>
 			</div>
 			<div>
 				<span
 					class="bg-linear-to-r from-indigo-300 to-purple-300 bg-clip-text text-5xl font-bold text-transparent dark:from-indigo-400 dark:to-purple-400"
-					>Misty6760</span
+					>ZYNTAX</span
 				>
 			</div>
 			<div class="min-h-50 relative flex max-h-screen items-center justify-center">
@@ -169,8 +169,7 @@
 					<p
 						class="mb-4 text-base leading-relaxed text-black md:mb-6 md:text-lg dark:text-gray-100"
 					>
-						안녕하세요! 개발자 <span class="font-bold text-teal-400 dark:text-teal-300"
-							>Misty6760</span
+						안녕하세요! 개발자 <span class="font-bold text-teal-400 dark:text-teal-300">ZYNTAX</span
 						>입니다.
 					</p>
 					<p class="dark:text-gray-100">
@@ -264,7 +263,7 @@
 					</div>
 					<div class="flex space-x-4">
 						<a
-							href="https://github.com/misty6760/Firewall-Projecte"
+							href="https://github.com/zyntax6760/Firewall-Projecte"
 							target="_blank"
 							class="transform-all text-black duration-200 hover:text-black/50 dark:text-gray-200 dark:hover:text-gray-400"
 							>Github</a
@@ -297,7 +296,7 @@
 					</div>
 					<div class="flex space-x-4">
 						<a
-							href="https://github.com/misty6760/Weather-Mate"
+							href="https://github.com/zyntax6760/Weather-Mate"
 							target="_blank"
 							class="transform-all text-black duration-200 hover:text-black/50 dark:text-gray-200 dark:hover:text-gray-400"
 							>Github</a
@@ -359,7 +358,7 @@
 				</div>
 				<div class="justify-self-start">
 					<a
-						href="https://github.com/misty6760"
+						href="https://github.com/zyntax6760"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="text-xl font-bold text-gray-900 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
@@ -382,7 +381,46 @@
 		</div>
 	</div>
 	<!-- 푸터 섹션 -->
-	<div class="py-30 bg-gray-700">
-		<div class="grid-cols- grid"></div>
+	<div class="bg-gray-600 py-12 dark:bg-gray-700">
+		<div class="mx-auto max-w-4xl px-4">
+			<div class="justify-self-center">
+				<h3 class="mb-2 text-xl font-bold text-white">연락처 링크</h3>
+				<ul class="list-none space-y-2 pl-3 text-center text-lg">
+					<li>
+						<a
+							href={emailLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="font-bold text-gray-900 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+							>Email</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://github.com/zyntax6760"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="font-bold text-gray-900 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+							>GitHub</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://discord.com/users/901664081801535489"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="font-bold text-gray-900 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-400"
+							>Discord</a
+						>
+					</li>
+				</ul>
+			</div>
+			<hr class="my-4 border-gray-500 dark:border-gray-600" />
+			<div class="mt-4">
+				<p class="text-center text-base text-gray-500 dark:text-gray-400">
+					&copy; {new Date().getFullYear()} ZYNTAX. All rights reserved.
+				</p>
+			</div>
+		</div>
 	</div>
 </main>

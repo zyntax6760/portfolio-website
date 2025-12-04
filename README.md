@@ -1,38 +1,68 @@
-# sv
+# ZYNTAX Portfolio Site
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+---
 
-## Creating a project
+## 한국어
 
-If you're seeing this, you've probably already done this step. Congrats!
+ZYNTAX의 개인 포트폴리오 웹사이트입니다.
 
-```sh
-# create a new project in the current directory
-npx sv create
+### 🛠️ 기술 스택
 
-# create a new project in my-app
-npx sv create my-app
-```
+이 프로젝트는 다음 기술로 작성되었습니다:
 
-## Developing
+![SvelteKit](https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
+![Svelte](https://img.shields.io/badge/Svelte-5.39.5-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.16-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### ⚠️ 주의사항
 
-```sh
+이 저장소는 개인 포트폴리오 사이트입니다. 외부 기여나 커밋은 받지 않습니다.
+
+### 🚀 시작하기
+
+```bash
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+### 📄 라이선스
 
-To create a production version of your app:
+![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
-```sh
-npm run build
+이 프로젝트는 [MIT License](LICENSE)를 따릅니다.
+
+---
+
+## English
+
+Personal portfolio website of ZYNTAX.
+
+### 🛠️ Tech Stack
+
+This project is built with the following technologies:
+
+![SvelteKit](https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
+![Svelte](https://img.shields.io/badge/Svelte-5.39.5-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.16-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7.1.7-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+### ⚠️ Notice
+
+This repository is a personal portfolio site. External contributions or commits are not accepted.
+
+### 🚀 Getting Started
+
+```bash
+npm install
+npm run dev
 ```
 
-You can preview the production build with `npm run preview`.
+### 📄 License
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
+
+This project is licensed under the [MIT License](LICENSE).
+

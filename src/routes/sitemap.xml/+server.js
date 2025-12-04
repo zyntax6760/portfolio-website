@@ -2,7 +2,7 @@ import { json } from '@sveltejs/kit';
 
 /** @type {import('./$types').RequestHandler} */
 export async function GET() {
-	const siteUrl = 'https://misty6760.kro.kr';
+	const siteUrl = 'https://zyntax.kro.kr';
 	const currentDate = new Date().toISOString().split('T')[0];
 
 	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
