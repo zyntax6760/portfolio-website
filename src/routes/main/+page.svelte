@@ -208,7 +208,7 @@
 		</div>
 	</div>
 	<!-- 스킬 섹션 -->
-	<div id="skills" class="py-30">
+	<div id="skills" class="py-20">
 		<div class="mx-auto my-28 max-w-3xl px-4">
 			<h2 class="mb-8 text-center text-3xl font-bold dark:text-white">Skills</h2>
 			<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
