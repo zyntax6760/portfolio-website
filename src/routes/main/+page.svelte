@@ -1,8 +1,8 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
+	import { slide } from 'svelte/transition';
 	import emailModule from '$lib/components/contact_email.js';
 	import { isMobile } from '$lib/components/mobile_nav.js';
-	import DetailAccordion from './detail_accordion.svelte';
 	import { Github, Mail } from 'lucide-svelte';
 	import { toastMessage, showToast } from '$lib/components/store.js';
 	import Toast from './toast.svelte';
@@ -19,6 +19,21 @@
 	function showLinkMessage() {
 		toastMessage.set('아직  링크가 준비되지 않았습니다!');
 		showToast.set(true);
+	}
+
+	async function toggleFirewall(show) {
+		showFirewall = show;
+		await tick();
+	}
+
+	async function toggleWeather(show) {
+		showWeather = show;
+		await tick();
+	}
+
+	async function toggleAir(show) {
+		showAir = show;
+		await tick();
 	}
 
 	onMount(() => {
@@ -121,21 +136,11 @@
 	<div id="home" class="bg-linear-to-b py-50 flex min-h-screen items-center justify-center">
 		<div class="mx-auto max-w-4xl px-6 text-center">
 			<div class="mb-8">
-				<div
-					class="h-55 w-55 mx-auto flex aspect-square items-center justify-center overflow-hidden rounded-full border-4 border-gray-200 shadow-lg dark:border-gray-700"
-				>
-					<img
-						src="/imgs/profile.svg"
-						alt="profil_logo"
-						class="h-64 w-64 mt-10 object-contain pb-10"
-					/>
-				</div>
-			</div>
-			<div>
-				<span
-					class="bg-linear-to-r from-indigo-300 to-purple-300 bg-clip-text text-5xl font-bold text-transparent dark:from-indigo-400 dark:to-purple-400"
-					>ZYNTAX</span
-				>
+				<img
+					src="/imgs/profile.svg"
+					alt="profil_logo"
+					class="h-lg w-lg mt-10 object-contain pb-10"
+				/>
 			</div>
 			<div class="min-h-50 relative flex max-h-screen items-center justify-center">
 				{#if !isMobileDevice}
@@ -208,7 +213,7 @@
 			<h2 class="mb-8 text-center text-3xl font-bold dark:text-white">Skills</h2>
 			<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
 				<div
-					class="rounded-lg bg-gray-300 p-4 px-8 shadow-lg transition-transform hover:scale-105 dark:bg-gray-700"
+					class="not-dark:bg-gray-400 not-dark:hover:bg-gray-300/80 rounded-lg p-4 px-8 shadow-lg transition-all duration-300 hover:scale-110 dark:bg-gray-600 dark:hover:bg-gray-500/50"
 				>
 					<h3 class="mb-2 text-xl font-bold dark:text-white">Frontend</h3>
 					<ul class="list-inside list-disc text-black dark:text-gray-200">
@@ -218,7 +223,7 @@
 					</ul>
 				</div>
 				<div
-					class="rounded-lg bg-gray-300 p-4 px-8 shadow-lg transition-transform hover:scale-105 dark:bg-gray-700"
+					class="not-dark:bg-gray-400 not-dark:hover:bg-gray-300/80 rounded-lg p-4 px-8 shadow-lg transition-all duration-300 hover:scale-110 dark:bg-gray-600 dark:hover:bg-gray-500/50"
 				>
 					<h3 class="mb-2 text-xl font-bold dark:text-white">Coding</h3>
 					<ul class="list-inside list-disc text-black dark:text-gray-200">
@@ -227,7 +232,7 @@
 					</ul>
 				</div>
 				<div
-					class="rounded-lg bg-gray-300 p-4 px-8 shadow-lg transition-transform hover:scale-105 dark:bg-gray-700"
+					class="not-dark:bg-gray-400 not-dark:hover:bg-gray-300/80 rounded-lg p-4 px-8 shadow-lg transition-all duration-300 hover:scale-110 dark:bg-gray-600 dark:hover:bg-gray-500/50"
 				>
 					<h3 class="mb-2 text-xl font-bold dark:text-white">Database</h3>
 					<div class="list-inside list-disc text-black dark:text-gray-200">
@@ -247,15 +252,22 @@
 			<h2 class="mb-8 text-center text-3xl font-bold dark:text-white">Projects</h2>
 			<div class="grid grid-cols-1 items-start gap-8 md:grid-cols-3">
 				<div
-					class="overflow-hidden rounded-lg bg-gray-300 p-4 shadow-lg duration-300 hover:scale-105 dark:bg-gray-700"
+					role="button"
+					tabindex="0"
+					class="overflow-hidden rounded-lg bg-gray-300 p-4 shadow-lg duration-300 dark:bg-gray-700"
+					on:mouseover={() => toggleFirewall(true)}
+					on:mouseout={() => toggleFirewall(false)}
+					on:focus={() => toggleFirewall(true)}
+					on:blur={() => toggleFirewall(false)}
 				>
 					<h3 class="mb-2 text-xl font-bold dark:text-white">🧱 방화벽 프로젝트</h3>
-					<!-- 상세 설명만 토글 -->
-					<DetailAccordion bind:open={showFirewall}>
-						<ul class="list-inside list-disc space-y-2 pl-5">
-							<li class="ml-2 -indent-5">파이썬을 활용하여 방화벽의 원리를 알아보았습니다.</li>
-						</ul>
-					</DetailAccordion>
+					{#if showFirewall}
+						<div transition:slide={{ duration: 300 }} class="mt-2 dark:text-white">
+							<ul class="list-inside list-disc space-y-2 pl-5">
+								<li class="ml-2 -indent-5">파이썬을 활용하여 방화벽의 원리를 알아보았습니다.</li>
+							</ul>
+						</div>
+					{/if}
 					<div class="mt-1">
 						<p class="dark:text-gray-200">
 							상태: <span class="font-bold text-green-700 dark:text-green-400">완료</span>
@@ -263,7 +275,7 @@
 					</div>
 					<div class="flex space-x-4">
 						<a
-							href="https://github.com/zyntax6760/Firewall-Projecte"
+							href="https://github.com/zyntax6760/Firewall-Project"
 							target="_blank"
 							class="transform-all text-black duration-200 hover:text-black/50 dark:text-gray-200 dark:hover:text-gray-400"
 							>Github</a
@@ -271,24 +283,32 @@
 					</div>
 				</div>
 				<div
-					class="transform-all overflow-hidden rounded-lg bg-gray-300 p-4 shadow-lg duration-200 hover:scale-105 dark:bg-gray-700"
+					role="button"
+					tabindex="0"
+					class="transform-all overflow-hidden rounded-lg bg-gray-300 p-4 shadow-lg duration-200 dark:bg-gray-700"
+					on:mouseover={() => toggleWeather(true)}
+					on:mouseout={() => toggleWeather(false)}
+					on:focus={() => toggleWeather(true)}
+					on:blur={() => toggleWeather(false)}
 				>
 					<h3 class="mb-2 text-xl font-bold dark:text-white">🌥️ 날씨 친구</h3>
-					<DetailAccordion bind:open={showWeather}>
-						<ul class="list-inside list-disc space-y-2 pl-5">
-							<li class="ml-2 -indent-5">
-								원하는 이미지를 날씨에 맞추어 넣으면, 날씨에 따라 이미지를 띄워줍니다.
-							</li>
+					{#if showWeather}
+						<div transition:slide={{ duration: 500 }} class="mt-2 dark:text-white">
+							<ul class="list-inside list-disc space-y-2 pl-5">
+								<li class="ml-2 -indent-5">
+									원하는 이미지를 날씨에 맞추어 넣으면, 날씨에 따라 이미지를 띄워줍니다.
+								</li>
 
-							<li>
-								사용 API
-								<ol class="mt-1 list-inside list-decimal space-y-1 pl-6">
-									<li>OpenWeatherMap</li>
-									<li>Kakao Map</li>
-								</ol>
-							</li>
-						</ul>
-					</DetailAccordion>
+								<li>
+									사용 API
+									<ol class="mt-1 list-inside list-decimal space-y-1 pl-6">
+										<li>OpenWeatherMap</li>
+										<li>Kakao Map</li>
+									</ol>
+								</li>
+							</ul>
+						</div>
+					{/if}
 					<div class="mt-1">
 						<p class="dark:text-gray-200">
 							상태: <span class="font-bold text-green-700 dark:text-green-400">완료</span>
@@ -304,21 +324,29 @@
 					</div>
 				</div>
 				<div
-					class="transform-all overflow-hidden rounded-lg bg-gray-300 p-4 shadow-lg duration-200 hover:scale-105 dark:bg-gray-700"
+					role="button"
+					tabindex="0"
+					class="transform-all overflow-hidden rounded-lg bg-gray-300 p-4 shadow-lg duration-200 dark:bg-gray-700"
+					on:mouseover={() => toggleAir(true)}
+					on:mouseout={() => toggleAir(false)}
+					on:focus={() => toggleAir(true)}
+					on:blur={() => toggleAir(false)}
 				>
 					<h3 class="mb-2 text-xl font-bold dark:text-white">액자형 공기청정기</h3>
-					<DetailAccordion bind:open={showAir}>
-						<ul class="list-inside list-disc space-y-2 pl-5">
-							<li class="ml-2 -indent-5">액자식 공기청정기를 라즈베리파이로 제작하였습니다.</li>
-							<li>
-								특징
-								<ol class="mt-1 list-inside list-decimal space-y-1 pl-6">
-									<li>액자식 형태로 공간 차지 최소화</li>
-									<li>디자인에 잘 어울리고 분위기 저하 감소</li>
-								</ol>
-							</li>
-						</ul>
-					</DetailAccordion>
+					{#if showAir}
+						<div transition:slide={{ duration: 300 }} class="mt-2 dark:text-white">
+							<ul class="list-inside list-disc space-y-2 pl-5">
+								<li class="ml-2 -indent-5">액자식 공기청정기를 라즈베리파이로 제작하였습니다.</li>
+								<li>
+									특징
+									<ol class="mt-1 list-inside list-decimal space-y-1 pl-6">
+										<li>액자식 형태로 공간 차지 최소화</li>
+										<li>디자인에 잘 어울리고 분위기 저하 감소</li>
+									</ol>
+								</li>
+							</ul>
+						</div>
+					{/if}
 					<div class="mt-1">
 						<p class="dark:text-gray-200">
 							상태: <span class="font-bold text-red-700 dark:text-red-400">미완성</span>
@@ -381,8 +409,8 @@
 		</div>
 	</div>
 	<!-- 푸터 섹션 -->
-	<div class="bg-gray-600 py-12 dark:bg-gray-700">
-		<div class="mx-auto max-w-4xl px-4">
+	<div class="bg-gray-700 py-12 dark:bg-gray-800">
+		<!-- <div class="mx-auto max-w-4xl px-4">
 			<div class="justify-self-center">
 				<h3 class="mb-2 text-xl font-bold text-white">연락처 링크</h3>
 				<ul class="list-none space-y-2 pl-3 text-center text-lg">
@@ -415,12 +443,12 @@
 					</li>
 				</ul>
 			</div>
-			<hr class="my-4 border-gray-500 dark:border-gray-600" />
-			<div class="mt-4">
-				<p class="text-center text-base text-gray-500 dark:text-gray-400">
-					&copy; {new Date().getFullYear()} ZYNTAX. All rights reserved.
-				</p>
-			</div>
+			<hr class="my-4 border-gray-500 dark:border-gray-600" /> -->
+		<div class="mt-4">
+			<p class="text-center text-base text-gray-500 dark:text-gray-400">
+				&copy; {new Date().getFullYear()} ZYNTAX. All rights reserved.
+			</p>
 		</div>
+		<!-- </div> -->
 	</div>
 </main>

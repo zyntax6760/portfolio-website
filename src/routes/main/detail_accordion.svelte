@@ -14,18 +14,25 @@
 	<button
 		type="button"
 		class="flex w-full items-center justify-between py-2 focus:outline-none"
-		on:click={toggle}
+		on:mouseover={() => toggle()}
+		on:mouseout={() => toggle()}
+		on:focus={() => toggle()}
+		on:blur={() => toggle()}
 	>
 		<h3 class="text-lg font-medium dark:text-white">{title}</h3>
 		<!-- 삼각형 클릭하면 아래로 90도 -->
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 14 14"
-			class="duration-250 h-5 w-5 text-black transition-transform dark:text-white"
+			class="duration-250 h-7 w-7 text-black transition-transform dark:text-white"
 			style="transform: rotate({open ? -90 : 0}deg)"
 		>
 			<!-- 왼쪽을 가리키는 삼각형 -->
-			<path d="M 10 1 Z L 0 7 L 10 12 Z" fill="currentColor" />
+			<path
+				d="M 10 1 Z L 0 7 L 10 12 Z"
+				fill="currentColor"
+				class="transition-all duration-200 hover:cursor-pointer hover:fill-gray-400"
+			/>
 		</svg>
 	</button>
 	<!-- 내용 (슬라이드) -->
